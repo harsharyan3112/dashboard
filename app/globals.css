@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f8fa;
+  --foreground: #101114;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button, input, select { font: inherit; }
+
+button { cursor: pointer; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #cfd3d8; border-radius: 999px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(16, 17, 20, 0.035);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(#e9eaec 1px, transparent 1px),
+    linear-gradient(90deg, #e9eaec 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.fade-in { animation: fadeIn .25s ease-out; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
